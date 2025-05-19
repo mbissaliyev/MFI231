@@ -22,7 +22,7 @@ setnames(dt_all, names(dt_all),
 dt_all[, QUOTE_DATE := as.Date(QUOTE_DATE, "%d.%m.%Y")]
 dt_all[, QUOTE_TIME_HOURS := NULL]
 
-# 2) Build daily returns & ΔIV
+# 2) Build daily returns and delta IV
 daily <- dt_all %>%
   group_by(QUOTE_DATE) %>%
   summarize(
